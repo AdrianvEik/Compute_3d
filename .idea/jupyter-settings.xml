@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JupyterPersistentConnectionParameters">
+    <option name="knownRemoteServers">
+      <list>
+        <JupyterConnectionParameters>
+          <option name="authType" value="notebook" />
+          <option name="token" value="46162b3d9fa8483b868fa4711a86b20f" />
+          <option name="urlString" value="https://milgrom.tn.hhs.nl/jupyterhub/user/s20071426/" />
+          <authParams2>
+            <map>
+              <entry key="token" value="46162b3d9fa8483b868fa4711a86b20f" />
+            </map>
+          </authParams2>
+        </JupyterConnectionParameters>
+      </list>
+    </option>
+    <option name="moduleParameters">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../Python/LaPlace_transform/.idea/LaPlace_transform.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+              <option name="sdkHomePath" value="C:\Users\vanei\.conda\envs\scientificProject\python.exe" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../School NH1/Blok 2/Metrologie_2/.idea/Metrologie_2.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+              <option name="sdkHomePath" value="C:\Users\vanei\.conda\envs\scientificProject\python.exe" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+        <entry key="E:/School/Onderzoeken/.idea/Onderzoeken.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+              <option name="sdkHomePath" value="C:\Users\vanei\AppData\Local\Programs\Python\Python38-32\python.exe" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
