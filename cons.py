@@ -1,6 +1,6 @@
 ## File containing constructor class for converting multiple .dat files to
 ## a 3D view.
-from typing import Tuple
+from typing import Tuple, Union
 
 import AdrianPack.Fileread as r_d
 
@@ -13,13 +13,14 @@ class Datfile:
     """
     Convert a .dat file to a 3 dimension nx3 numpy array.
 
-    :param pth: Path to the .dat file
+    :param data: Path to the .dat file or dictionary of numpy arrays
+                 {"x": np.ndarray, "y": np.ndarray, "z": np.ndarray}
     :param format: Format of the .dat file, e.g. "x y z"
 
     :param kwargs: Keyword arguments for the missing axis. e.g. x = 10 or y = 20 and for the start row in the file.
     """
 
-    def __init__(self, pth: str, format: str, **kwargs):
+    def __init__(self, data: Union[str, dict], format: str, **kwargs):
 
         # Req, contains the required axis
         req = ["x", "y", "z"]
@@ -28,9 +29,11 @@ class Datfile:
         # Check which axis is missing, and look it up in the kwargs
         missing = list(set(req) - set(fmt))
 
-        # Read the pth.dat file and convert it to a numpy array
-        data = r_d.Fileread(pth, delimiter=",", start_row=kwargs.get("start_row", 5),
-                            head=True, dtype=float)()
+        if isinstance(data, str):
+            # Read the pth.dat file and convert it to a numpy array
+            data = r_d.Fileread(data, delimiter=",", start_row=kwargs.get("start_row", 5),
+                                head=True, dtype=float)()
+
         missing_ax = []
         # use the header to find the missing axis value
         if list(data.keys())[0] in ["x", "y", "z"]:

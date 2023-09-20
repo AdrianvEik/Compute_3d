@@ -25,7 +25,23 @@
             </JupyterConnectionParameters>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../Python/LaPlace_transform/.idea/LaPlace_transform.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+              <option name="sdkHomePath" value="C:\Users\vanei\.conda\envs\scientificProject\python.exe" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../School NH1/Blok 2/Metrologie_2/.idea/Metrologie_2.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+              <option name="sdkHomePath" value="C:\Users\vanei\.conda\envs\scientificProject\python.exe" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../School/School NH1/Blok 2/Metrologie_2/.idea/Metrologie_2.iml">
           <value>
             <JupyterConnectionParameters>
               <option name="managed" value="true" />

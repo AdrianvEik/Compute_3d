@@ -18,7 +18,7 @@ from cons import model_constructor, Datfile
 # # general plotter
 # fig, ax = Default(data[0], data[1], linestyle="-", marker="")()
 
-gr = model_constructor(path="model100.npy")
+gr = model_constructor(path="model2.npy")
 print(gr.model.shape)
 print(gr.model)
 gr.plot_model()
