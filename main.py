@@ -60,7 +60,7 @@ class Model:
         for i in range(slices):
             datlist.append(Datfile({"x": dmat[0][i::slices],
                                     "y": dmat[1][i::slices],
-                                    "z": dmat[2][i::slices]}),
-                                    format="x y z")
+                                    "z": dmat[2][i::slices]},
+                                    format="x y z"))
 
         return datlist
