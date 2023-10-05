@@ -1,15 +1,19 @@
 
 import pytest
+import unittest
 
 from compute_3d.cons import model_constructor, Datfile
 
-@pytest.mark.usefixtures("db_class")
-class Test_Modelcons:
+# @pytest.mark.usefixtures("db_class")
+class Test_Modelcons(unittest.TestCase):
     def test_model_cons(self):
         pass
 
     def test_datfile(self):
-        dfile = Datfile(path="Test_data/smallestrange50mm010mmsx2.dat",
-                        format="x y", z=10)
+        paths = ["Test_data/smallestrange50mm010mms.dat", "Test_data/smallestrange50mm010mmsx2.dat",
+                 "Test_data/smallestrange50mm010mmsx3.dat"]
 
-        self.assertEqual(dfile.datmat.shape, (2, 1000))
+        for p in paths:
+            dfile = Datfile(data=p, format="x y", z=10)
+
+            self.assertEqual(dfile.datmat.shape, (48925, 3))
