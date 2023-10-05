@@ -53,7 +53,7 @@ class Datfile:
         # e.g. if z is missing, the array will be [data[0], data[1], missing_ax]
 
         self.datmat = np.array([np.full(list(data.values())[0].size, missing_ax) if i == missing[0] else
-                                list(data.values())[fmt.index(i)] * 1000 for i in req]).T # Convert to nm
+                                list(data.values())[fmt.index(i)] for i in req]).T # Convert to nm
 
         # Grad for df(x)/dx, df(y)/dy, df(z)/dz
         self.grad = np.gradient(self.datmat)[0]

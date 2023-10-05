@@ -9,5 +9,7 @@ class Test_Modelcons:
         pass
 
     def test_datfile(self):
-        Datfile(path="Test_data/smallestrange50mm010mmsx2.dat",
-                format="x y", z=10)
+        dfile = Datfile(path="Test_data/smallestrange50mm010mmsx2.dat",
+                        format="x y", z=10)
+
+        self.assertEqual(dfile.datmat.shape, (2, 1000))
