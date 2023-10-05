@@ -1,6 +1,7 @@
 
 import pytest
 import unittest
+import numpy as np
 
 from compute_3d.cons import model_constructor, Datfile
 
@@ -14,6 +15,7 @@ class Test_Modelcons(unittest.TestCase):
                  "Test_data/smallestrange50mm010mmsx3.dat"]
 
         for p in paths:
-            dfile = Datfile(data=p, format="x y", z=10)
+            dfile = Datfile(data=p, format="x y", z=10, start_row=1)
 
-            self.assertEqual(dfile.datmat.shape, (48925, 3))
+            self.assertEqual(dfile.datmat.shape, (48924, 3))
+            self.assertEqual(np.average(dfile.z), 10)
