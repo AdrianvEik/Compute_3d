@@ -18,6 +18,7 @@ class Datfile:
     :param format: Format of the .dat file, e.g. "x y z"
 
     :param kwargs: Keyword arguments for the missing axis. e.g. x = 10 or y = 20 and for the start row in the file.
+    :param kwargs: start_row: int, default = 0
     """
 
     def __init__(self, data: Union[str, dict], format: str, **kwargs):
@@ -31,7 +32,7 @@ class Datfile:
 
         if isinstance(data, str):
             # Read the pth.dat file and convert it to a numpy array
-            data = r_d.Fileread(data, delimiter=",", start_row=kwargs.get("start_row", 5),
+            data = r_d.Fileread(data, delimiter=",", start_row=kwargs.get("start_row", 0),
                                 head=True, dtype=float)()
 
         missing_ax = []
