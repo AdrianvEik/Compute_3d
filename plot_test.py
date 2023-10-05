@@ -1,9 +1,4 @@
-
-import AdrianPack.Fileread as r_d
-from AdrianPack.Aplot import Default
-import numpy as np
-
-from cons import model_constructor, Datfile
+from compute_3d.cons import model_constructor
 
 # data_folder = r"data"
 # #
@@ -18,7 +13,7 @@ from cons import model_constructor, Datfile
 # # general plotter
 # fig, ax = Default(data[0], data[1], linestyle="-", marker="")()
 
-gr = model_constructor(path="model2.npy")
+gr = model_constructor(path="model100.npy")
 print(gr.model.shape)
 print(gr.model)
 gr.plot_model()
